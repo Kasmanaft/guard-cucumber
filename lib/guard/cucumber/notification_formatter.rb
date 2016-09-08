@@ -118,7 +118,7 @@ module Guard
         icon = statuses.reverse.detect { |status| icon_for(status) }
 
         msg = messages.reverse.join(", ")
-        Guard::Compat::UI.notify msg, title: "Cucumber Results", image: icon
+        Guard::Compat::UI.notify msg, title: "Cucumber Results", image: icon, priority: 2
       end
 
       # Writes the `rerun.txt` file containing all failed features.
