@@ -60,6 +60,10 @@ module Guard
         notify_summary
         write_rerun_features if !@file_names.empty?
       end
+      
+      def after_feature(_feature)
+        notify_summary
+      end
 
       # Before a feature gets run.
       #
